@@ -6,7 +6,7 @@ only ensures that package versions are the same, but does not verify contents.
 This module checks the shasum of the package tarballs downloaded by npm during
 development and deployment to ensure they are the same.
 
-![seal](https://github.com/zaach/reflect.js/raw/master/npm-seal.png)
+![seal](https://github.com/zaach/npm-seal/raw/master/npm-seal.png)
 
 Usage:
 1. Install you packages (`npm install`)
