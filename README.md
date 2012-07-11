@@ -14,6 +14,10 @@
  5) Check sealed shrinkwrap against installed packages (on server, `seal c`)
  6) If the check fails, errors will be dumped to stderr in JSON
 
+## Install
+
+    npm install seal -g
+
 ## CLI
     $ seal -h
      Usage: seal [command] [input] [options]
