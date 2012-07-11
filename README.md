@@ -1,4 +1,4 @@
- # seal
+ # seal #
 
  This module can verify that packages installed during development are
  identical to those installed during deployment. The standard `npm shrinkwrap`
@@ -7,12 +7,12 @@
  development and deployment to ensure they are the same.
 
  Usage:
- 1) Install you packages (`npm install`)
- 2) Generate shrinkwrap (`npm shrinkwrap`)
- 3) Generate a sealed shrinkwrap file (`seal g`)
- 4) Deploy code and install packages (on server, `npm install`)
- 5) Check sealed shrinkwrap against installed packages (on server, `seal c`)
- 6) If the check fails, errors will be dumped to stderr in JSON
+ # Install you packages (`npm install`)
+ # Generate shrinkwrap (`npm shrinkwrap`)
+ # Generate a sealed shrinkwrap file (`seal g`)
+ # Deploy code and install packages (on server, `npm install`)
+ # Check sealed shrinkwrap against installed packages (on server, `seal c`)
+ # If the check fails, errors will be dumped to stderr in JSON
 
 ## Install
 
