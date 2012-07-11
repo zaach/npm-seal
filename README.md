@@ -9,6 +9,7 @@ development and deployment to ensure they are the same.
 ![seal](https://github.com/zaach/npm-seal/raw/master/npm-seal.png)
 
 Usage:
+
 1. Install you packages (`npm install`)
 2. Generate shrinkwrap (`npm shrinkwrap`)
 3. Generate a sealed shrinkwrap file (`seal g`)
