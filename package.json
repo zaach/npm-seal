@@ -22,7 +22,8 @@
   ],
   "author": "Zach Carter <zach@carter.name> (http://zaa.ch)",
   "dependencies": {
-    "nomnom": "1.5.2"
+    "nomnom": "1.5.2",
+    "npm": "1.1.24"
   },
   "devDependencies": {
     "vows": "*"

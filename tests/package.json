@@ -1,0 +1,9 @@
+{
+  "name": "test-seal",
+  "version": "0.0.0",
+  "description": "test seal",
+  "main": "test.js",
+  "dependencies": {
+    "seal": "0.0.1"
+  }
+}

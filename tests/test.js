@@ -35,7 +35,13 @@ suite.addBatch({
       },
       "verification fails": function (error, stdout, stderr) {
         var errors = JSON.parse(stderr);
-        assert.equal(errors.length, 2);
+        assert.deepEqual(errors, [
+          {
+            "dep": "nomnom 1.5.2",
+            "expected": "f4345448a853cfbd5c0d26320f2477ab0526fe2f",
+            "actual": "f4345448a853cfbd5c0d26320f2477ab0526fe2e"
+          }
+        ]);
       }
     }
   }
