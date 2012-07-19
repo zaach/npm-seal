@@ -1,0 +1,27 @@
+{
+  "name": "seal",
+  "version": "0.0.1",
+  "description": "Verify that packages installed during development match those installed in production",
+  "main": "lib/seal.js",
+  "bin": "lib/cli.js",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "license": "MIT",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "npm",
+    "shrinkwrap",
+    "seal",
+    "verify",
+    "dependencies",
+    "deployment"
+  ],
+  "author": "Zach Carter <zach@carter.name> (http://zaa.ch)",
+  "dependencies": {
+    "nomnom": "1.5.2"
+  }
+}

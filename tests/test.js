@@ -10,6 +10,8 @@ exec = require('child_process').exec;
 var suite = vows.describe('cli');
 var cliPath = '../lib/cli.js';
 
+var existsSync = fs.existsSync ? fs.existsSync : path.existsSync;
+
 suite.addBatch({
   "run seal generate": {
     topic: function () {
@@ -17,7 +19,7 @@ suite.addBatch({
       var child = exec(cmd, {cwd: path.resolve(__dirname)}, this.callback);
     },
     "sealed shrinkwrap file is generated" : function (error, stdout, stderr) {
-      assert.equal(fs.existsSync(path.resolve(__dirname + '/sealed-npm-shrinkwrap.json')), true);
+      assert.equal(existsSync(path.resolve(__dirname + '/sealed-npm-shrinkwrap.json')), true);
     },
     "run seal check": {
       topic: function () {
@@ -48,8 +50,32 @@ suite.addBatch({
 });
 
 suite.addBatch({
+ "run seal generate with input param": {
+    topic: function () {
+      var cmd = cliPath + ' --cache-dir ./good-pkgs generate ./npm-shrinkwrap2.json';
+      var child = exec(cmd, {cwd: path.resolve(__dirname)}, this.callback);
+    },
+    "sealed shrinkwrap file is generated" : function (error, stdout, stderr) {
+      var json = require(path.resolve(__dirname + '/sealed-npm-shrinkwrap.json'));
+      assert.equal(json.name, "test-seal-2");
+      assert.equal(existsSync(path.resolve(__dirname + '/sealed-npm-shrinkwrap.json')), true);
+    }
+  },
+  "run seal generate with output param": {
+    topic: function () {
+      var cmd = cliPath + ' --cache-dir ./good-pkgs --output test.json generate';
+      var child = exec(cmd, {cwd: path.resolve(__dirname)}, this.callback);
+    },
+    "test.json file is generated" : function (error, stdout, stderr) {
+      assert.equal(existsSync(path.resolve(__dirname + '/test.json')), true);
+    }
+  }
+});
+
+suite.addBatch({
   "cleanup": function () {
     fs.unlink(path.resolve(__dirname+'/sealed-npm-shrinkwrap.json'));
+    fs.unlink(path.resolve(__dirname+'/test.json'));
   }
 });
 

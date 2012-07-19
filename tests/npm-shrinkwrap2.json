@@ -1,0 +1,22 @@
+{
+  "name": "test-seal-2",
+  "version": "0.0.1",
+  "dependencies": {
+    "seal": {
+      "version": "0.0.1",
+      "dependencies": {
+        "nomnom": {
+          "version": "1.5.2",
+          "dependencies": {
+            "underscore": {
+              "version": "1.1.7"
+            },
+            "colors": {
+              "version": "0.5.1"
+            }
+          }
+        }
+      }
+    }
+  }
+}
