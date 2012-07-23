@@ -309,3 +309,5 @@ A help string describing the function of this command.
 #### usage
 
 Override the default generated usage string for this command.
+
+Oops! Something changed.
