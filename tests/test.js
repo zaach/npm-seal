@@ -41,8 +41,8 @@ suite.addBatch({
         assert.deepEqual(errors, [
           {
             "dep": "nomnom 1.5.2",
-            "expected": "7ed296f20474f9860a77d211c6b2891a0b7f4664",
-            "actual": "fb030a9d50db36037ff170739b8a14db51194e99"
+            "expected": "f4345448a853cfbd5c0d26320f2477ab0526fe2f",
+            "actual": "f4345448a853cfbd5c0d26320f2477ab0526fe2e"
           }
         ]);
       }
