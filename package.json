@@ -6,7 +6,7 @@
   "bin": "lib/cli.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "node tests/test.js"
+    "test": "node lib/cli c && node tests/test.js"
   },
   "license": "MIT",
   "directories": {
